@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Coffee_Machine</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="arrow.jpg" />
+    <None Remove="arrowleft.jpg" />
+    <None Remove="card_cup_dark.png" />
+    <None Remove="home_dark.png" />
+    <None Remove="keyboard_backspace_white_right.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="arrow.jpg" />
+    <Resource Include="arrowleft.jpg" />
+    <Resource Include="card_cup_dark.png" />
+    <Resource Include="home_dark.png" />
+    <Resource Include="keyboard_backspace_white_right.png" />
+  </ItemGroup>
+
+</Project>
