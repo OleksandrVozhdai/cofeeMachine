@@ -12,6 +12,7 @@
     <None Remove="arrow.jpg" />
     <None Remove="arrowleft.jpg" />
     <None Remove="card_cup_dark.png" />
+    <None Remove="dark_cup.png" />
     <None Remove="home_dark.png" />
     <None Remove="keyboard_backspace_white_right.png" />
   </ItemGroup>
@@ -20,6 +21,7 @@
     <Resource Include="arrow.jpg" />
     <Resource Include="arrowleft.jpg" />
     <Resource Include="card_cup_dark.png" />
+    <Resource Include="dark_cup.png" />
     <Resource Include="home_dark.png" />
     <Resource Include="keyboard_backspace_white_right.png" />
   </ItemGroup>
