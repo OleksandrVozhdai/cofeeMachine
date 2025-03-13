@@ -222,7 +222,7 @@
         </Style>
     </Window.Resources>
     <Grid Name = "Machine"  Background="#121212" Margin="0,0,0,-6">
-        <Grid Name="Menu" Background="#121212" Margin="0,0,0,-6" d:IsHidden="True">
+        <Grid Name="Menu" Background="#121212" Margin="0,0,0,-6">
             <Grid.RenderTransform>
                 <TranslateTransform x:Name="MenuTransform" />
             </Grid.RenderTransform>
@@ -247,11 +247,11 @@
             <Label Content="Coffee Machine" HorizontalAlignment="Center" Height="60" VerticalAlignment="Top" Width="302" FontSize="40" Foreground="White" FontFamily="Microsoft Sans Serif" Margin="0,240,0,0" FontWeight="Bold"/>
             <Label Content="pick your blend, tailor your flavors, and savor the &#xD;&#xA;                              perfection!" HorizontalAlignment="Center" Height="60" VerticalAlignment="Top" Width="642" FontSize="20" Foreground="#FF9D9D9D" FontFamily="Microsoft Sans Serif" Margin="0,305,0,0" HorizontalContentAlignment="Center"/>
         </Grid>
-        <Grid Name="CofeeSelection" RenderTransformOrigin="0.51,0.502" d:IsHidden="True">
+        <Grid Name="CofeeSelection" RenderTransformOrigin="0.51,0.502">
             <Grid.RenderTransform>
                 <TranslateTransform x:Name="CoffeeTransform" X="600"/>
             </Grid.RenderTransform>
-
+            <CheckBox Checked="AddSugarPageOneChecked" Unchecked="AddSugarPageOneUnChecked" Content="Add sugar" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="86" Margin="448,521,0,0" Foreground="White" RenderTransformOrigin="0.372,0.336"/>
             <Label Foreground ="White" Content="Cofee Selection" HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="306" FontFamily="Microsoft Sans Serif" FontSize="40" FontWeight="Bold" Margin="338,60,0,0"/>
             <Button Name ="LatteButton" Style="{DynamicResource CoffeeSetionButtons}" Background="Transparent" Margin="382,168,412,90" 
                     Width="217" BorderThickness="0" Cursor="Hand"
@@ -291,6 +291,7 @@
                     <Label Foreground ="White" Content="3 Mins" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="91" FontFamily="Microsoft Sans Serif" Margin="6,-33,0,0"/>
                     <Rectangle HorizontalAlignment="Left" Height="20"  Stroke="#FF959595"  Width="20" RadiusY="5" RadiusX="5" Margin="163,-43,0,0"/>
                     <Label Foreground ="Green" Content="4 "  Height="20" Width="16" FontFamily="Microsoft Sans Serif" FontSize="10" Margin="146,-44,0,0"/>
+                    <Image Opacity ="0" Name ="LatteSugar" Height="67" Width="62" Source="/sugar.png" Margin="0,-189,-117,0"/>
                 </StackPanel>
                 <Button.RenderTransform>
                     <ScaleTransform x:Name="LatteButtonScale" ScaleX="1" ScaleY="1" />
@@ -334,6 +335,7 @@
                     <Label Foreground ="White" Content="2 Mins" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="91" FontFamily="Microsoft Sans Serif" Margin="6,-33,0,0"/>
                     <Rectangle HorizontalAlignment="Left" Height="20"  Stroke="#FF959595"  Width="20" RadiusY="5" RadiusX="5" Margin="163,-43,0,0"/>
                     <Label Foreground ="Green" Content="3 "  Height="20" Width="16" FontFamily="Microsoft Sans Serif" FontSize="10" Margin="146,-44,0,0"/>
+                    <Image Opacity ="0" Name ="EspressoSugar" Height="67" Width="62" Source="/sugar.png" Margin="0,-189,-117,0"/>
                 </StackPanel>
                 <Button.RenderTransform>
                     <ScaleTransform x:Name="EspressoButtonScale" ScaleX="1" ScaleY="1" />
@@ -378,6 +380,7 @@
                     <Label Foreground ="White" Content="2 Mins" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="91" FontFamily="Microsoft Sans Serif" Margin="6,-33,0,0"/>
                     <Rectangle HorizontalAlignment="Left" Height="20"  Stroke="#FF959595"  Width="20" RadiusY="5" RadiusX="5" Margin="163,-43,0,0"/>
                     <Label Foreground ="Green" Content="3 "  Height="20" Width="16" FontFamily="Microsoft Sans Serif" FontSize="10" Margin="146,-44,0,0"/>
+                    <Image Opacity="0" Name ="CappuccinoSugar" Height="67" Width="62" Source="/sugar.png" Margin="0,-189,-117,0"/>
                 </StackPanel>
                 <Button.RenderTransform>
                     <ScaleTransform x:Name="CappuccinoButtonScale" ScaleX="1" ScaleY="1" />
@@ -446,6 +449,7 @@
                     <Label Foreground ="White" Content="3 Mins" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="91" FontFamily="Microsoft Sans Serif" Margin="6,-33,0,0"/>
                     <Rectangle HorizontalAlignment="Left" Height="20"  Stroke="#FF959595"  Width="20" RadiusY="5" RadiusX="5" Margin="163,-43,0,0"/>
                     <Label Foreground ="Green" Content="4 "  Height="20" Width="16" FontFamily="Microsoft Sans Serif" FontSize="10" Margin="146,-44,0,0"/>
+                    <Image Opacity="0" Name ="MacchiatoSugar" Height="67" Width="62" Source="/sugar.png" Margin="0,-189,-117,0"/>
                 </StackPanel>
                 <Button.RenderTransform>
                     <ScaleTransform x:Name="MacchiatoButtonScale" ScaleX="1" ScaleY="1" />
@@ -492,6 +496,7 @@
                     <Label Foreground ="White" Content="2 Mins" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="91" FontFamily="Microsoft Sans Serif" Margin="6,-33,0,0"/>
                     <Rectangle HorizontalAlignment="Left" Height="20"  Stroke="#FF959595"  Width="20" RadiusY="5" RadiusX="5" Margin="163,-43,0,0"/>
                     <Label Foreground ="Green" Content="3 "  Height="20" Width="16" FontFamily="Microsoft Sans Serif" FontSize="10" Margin="146,-44,0,0"/>
+                    <Image Opacity="0" Name ="ChocolateSugar" Height="67" Width="62" Source="/sugar.png" Margin="0,-189,-117,0"/>
                 </StackPanel>
             </Button>
             <Button Style="{DynamicResource AddButton}" Name="AddMoreButton"
@@ -532,6 +537,7 @@
                     <ScaleTransform x:Name="PageOneButtonScale" ScaleX="1" ScaleY="1" />
                 </Button.RenderTransform>
             </Button>
+            <CheckBox Checked="AddSugarPageTwoChecked" Unchecked="AddSugarPageTwoUnChecked" Content="Add sugar" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="86" Margin="448,521,0,0" Foreground="White"/>
 
         </Grid>
         <Grid x:Name="CoffeePreparing" Margin="10,0,-10,0" d:IsHidden="True">
@@ -584,7 +590,7 @@
 
         </Grid>
 
-        <Grid Name ="CustomDrink">
+        <Grid Name ="CustomDrink" d:IsHidden="True">
             <Grid.RenderTransform>
                 <TranslateTransform x:Name="CustomDrinkTransform" X="600"/>
             </Grid.RenderTransform>
@@ -595,30 +601,30 @@
                 x:Name="CustomDrinkNameLabel" Content="Make your own drink!" Foreground="White" Margin="0,39,0,0" FontFamily="Microsoft Sans Serif" FontSize="40"/>
             <Rectangle HorizontalAlignment="Left" Height="414" Margin="500,142,0,0" Stroke="#FF2E2E2E" VerticalAlignment="Top" Width="465" StrokeThickness="10" RadiusX="30" RadiusY="30" Fill="#FF3F3F3F"/>
             <Image HorizontalAlignment="Left" Height="309" Margin="106,131,0,0" VerticalAlignment="Top" Width="286" Source="/dark_cup.png"/>
-            <Slider HorizontalAlignment="Left" Height="55" Margin="561,214,0,0" VerticalAlignment="Top" Width="350"/>
-            <Slider HorizontalAlignment="Left" Height="55" Margin="561,295,0,0" VerticalAlignment="Top" Width="350"/>
-            <Slider HorizontalAlignment="Left" Height="55" Margin="561,374,0,0" VerticalAlignment="Top" Width="350"/>
-            <Slider HorizontalAlignment="Left" Height="55" Margin="561,456,0,0" VerticalAlignment="Top" Width="350"/>
+            <Slider Name ="CoffeeSlider" HorizontalAlignment="Left" Height="55" Margin="561,214,0,0" VerticalAlignment="Top" Width="350" ValueChanged="CoffeeSliderValueChanged" Cursor="Hand" Maximum="100"/>
+            <Slider Name ="MilkSlider" HorizontalAlignment="Left" Height="55" Margin="561,295,0,0" VerticalAlignment="Top" Width="350" ValueChanged="MilkSliderValueChanged" Cursor="Hand" Maximum="100"/>
+            <Slider Name="FoamSlider" HorizontalAlignment="Left" Height="55" Margin="561,374,0,0" VerticalAlignment="Top" Width="350" ValueChanged="FoamSliderValueChanged" Cursor="Hand" Maximum="100"/>
+            <Slider Name ="SugarSlider" HorizontalAlignment="Left" Height="55" Margin="561,456,0,0" VerticalAlignment="Top" Width="350" ValueChanged="SugarSliderValueChanged" Cursor="Hand"/>
             <Label HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" 
-                x:Name="CoffeeSlider" Content="Coffee" Foreground="White" Margin="686,167,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+                x:Name="CoffeeSliderLabel" Content="Coffee" Foreground="White" Margin="686,167,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
             <Label HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" 
-                x:Name="MilkSlider" Content="Milk" Foreground="White" Margin="702,253,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+                x:Name="MilkSliderLabel" Content="Milk" Foreground="White" Margin="702,253,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
             <Label HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" 
-                x:Name="FoamSlider" Content="Foam" Foreground="White" Margin="695,332,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+                x:Name="FoamSliderLabel" Content="Foam" Foreground="White" Margin="695,332,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
             <Label HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" 
-                x:Name="SugarSlider" Content="Sugar" Foreground="White" Margin="695,419,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+                x:Name="SugarSliderLabel" Content="Sugar" Foreground="White" Margin="695,419,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
 
             <Button x:Name ="CupButton" Style="{DynamicResource MenuButton}" Margin="106,484,630,32" Width="264" Height="74.7" BorderThickness="1" Foreground="White" Content="Ok" FontFamily="Microsoft Sans Serif" FontSize="28" Cursor="Hand"
                     RenderTransformOrigin="0.5,0.5"
@@ -635,6 +641,81 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <Image Name ="Sugar" HorizontalAlignment="Left" Height="46" Margin="195,342,0,0" VerticalAlignment="Top" Width="61" Source="/sugar.png" Opacity ="0" Panel.ZIndex="2"/>
+            <Ellipse Name="CoffeeElipse" Opacity="0" HorizontalAlignment="Left" Height="48" Margin="197,317,0,0" Stroke="#FF6F3418" VerticalAlignment="Top" Width="51" Fill ="#FF6F3718">
+                <Ellipse.Effect>
+                    <DropShadowEffect Color="#FFD2A48E" BlurRadius="30" ShadowDepth="0"/>
+                </Ellipse.Effect>
+            </Ellipse>
+            <Ellipse Name ="FoamElipse" Opacity="0" HorizontalAlignment="Left" Height="39" Margin="238,314,0,0" Stroke="#FFA09189" VerticalAlignment="Top" Width="40" Fill ="#FFA09189">
+                <Ellipse.Effect>
+                    <DropShadowEffect Color="#FFB8B3B0" ShadowDepth="0" BlurRadius="30"/>
+                </Ellipse.Effect>
+            </Ellipse>
+            <Ellipse Name ="MilkElipse" Opacity="0" HorizontalAlignment="Left" Height="39" Margin="165,314,0,0" Stroke="White" VerticalAlignment="Top" Width="40" Fill ="White" >
+                <Ellipse.Effect>
+                    <DropShadowEffect BlurRadius="30" ShadowDepth="0" Color="White"/>
+                </Ellipse.Effect>
+            </Ellipse>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                x:Name="CoffeeSliderValueLabel" Content="" Foreground="White" Margin="905,210,0,0" FontFamily="Microsoft Sans Serif"/>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                x:Name="MilkSliderValueLabel" Content="" Foreground="White" Margin="905,292,0,0" FontFamily="Microsoft Sans Serif"/>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                x:Name="FoamSliderValueLabel" Content="" Foreground="White" Margin="905,372,0,0" FontFamily="Microsoft Sans Serif"/>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                x:Name="SugarSliderValueLabel" Content=" " Foreground="White" Margin="905,453,0,0" FontFamily="Microsoft Sans Serif"/>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                x:Name="CostLable" Content="0.00 $" Foreground="#FF29932C" Margin="869,46,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+            <Label HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                x:Name="TimeLable" Content=">1 min" Foreground="#FFC3C3C3" Margin="865,93,0,0" FontFamily="Microsoft Sans Serif" FontSize="28"/>
+
+
+            <Rectangle  Stroke="#FF959595" RadiusY="5" RadiusX="5" Margin="860,50,43,507"/>
+        </Grid>
+
+        <Grid Name="Ready" d:IsHidden="True">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="ReadyDrinkTransform" X="600"/>
+            </Grid.RenderTransform>
+            <Label HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                x:Name="DrinkReadyLabel" Content="Your CoffeName is ready!" Foreground="White" Margin="0,89,0,0" FontFamily="Microsoft Sans Serif" FontSize="40"/>
+            <Image HorizontalAlignment="Center" Height="51" Margin="0,221,0,0" VerticalAlignment="Top" Width="51" Source="/check.png"/>
+            <Ellipse HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100" Fill="#FF3D3D3D" Panel.ZIndex="-1" Stroke="Black" Margin="0,195,0,0"/>
+            <Button Style="{DynamicResource MenuButton}" Content="Return" HorizontalAlignment="Center" Height="75"
+                Margin="0,396,0,0" VerticalAlignment="Top" Width="264" FontSize="28" 
+                Foreground="White" FontFamily="Microsoft Sans Serif" 
+                Cursor="Hand" RenderTransformOrigin="0.5,0.5"
+                PreviewMouseDown="ReadyButton_PreviewMouseDown"
+                PreviewMouseUp="ReadyButton_PreviewMouseUp">
+                <Button.RenderTransform>
+                    <ScaleTransform x:Name="ReadyButtonScale" ScaleX="1" ScaleY="1" />
+                </Button.RenderTransform>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF3A3A3A" Offset="0.68"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
         </Grid>
     </Grid>
 
