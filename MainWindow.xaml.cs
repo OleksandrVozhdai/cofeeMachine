@@ -290,6 +290,7 @@ namespace Coffee_Machine
             if (AddSugar == true)
                 drink = new SugarDecorator(drink);
 
+
             ChangeDrinkLabelContent(drink.Name);
             drink.MakeDrink(DrinkProgressBar);
 
@@ -1073,7 +1074,7 @@ namespace Coffee_Machine
                 TimetoPrepare += TimeSpan.FromSeconds(2);
             }
 
-            public override async Task MakeDrink(ProgressBar progressBar, Action<double> onProgressChanged = null   )
+            public override async Task MakeDrink(ProgressBar progressBar, Action<double> onProgressChanged = null)
             {
                 progressBar.Value = 0;
 
@@ -1096,6 +1097,7 @@ namespace Coffee_Machine
         public void ChangeDrinkLabelContent(string name)
         {
             DrinkNameLabel.Content = "Your " + name + " is being prepared...";
+            DrinkReadyLabel.Content = "Your " + name + " is ready!";
         }
 
         private void UpdateTotalCost()

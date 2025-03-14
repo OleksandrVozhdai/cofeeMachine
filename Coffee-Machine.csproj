@@ -16,6 +16,7 @@
     <None Remove="dark_cup.png" />
     <None Remove="home_dark.png" />
     <None Remove="keyboard_backspace_white_right.png" />
+    <None Remove="settigns.png" />
     <None Remove="sugar.png" />
   </ItemGroup>
 
@@ -27,6 +28,7 @@
     <Resource Include="dark_cup.png" />
     <Resource Include="home_dark.png" />
     <Resource Include="keyboard_backspace_white_right.png" />
+    <Resource Include="settigns.png" />
     <Resource Include="sugar.png" />
   </ItemGroup>
 

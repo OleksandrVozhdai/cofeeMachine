@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Coffee_Machine"
         mc:Ignorable="d"
-        Title="Coffee machine" Height="600" Width="1000" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Topmost="True">
+        Title="Coffee machine" Height="600" Width="1000" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Topmost="True" Icon="/card_cup_dark.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -403,6 +403,7 @@
                     <ScaleTransform x:Name="PageTwoButtonScale" ScaleX="1" ScaleY="1" />
                 </Button.RenderTransform>
             </Button>
+            <CheckBox Checked="AddTopicPageOneChecked" Unchecked="AddTopicPageOneUnChecked" Content="Add sugar" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="86" Margin="558,521,0,0" Foreground="White" RenderTransformOrigin="0.372,0.336"/>
 
         </Grid>
         <Grid Name="CoffeeSelectionPageTwo" Margin="91,0,-91,0" d:IsHidden="True">
